@@ -416,24 +416,19 @@ li {
     justify-content: space-evenly;
     /* margin: 15px; */
 }
-.collaborations__img-link {
+
+.collaborations__img {
     cursor: auto;
-}
-.collaborations__img-link img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.7s;
-    filter: grayscale(100%)
+    /* filter: grayscale(100%) */
 }
-.collaborations__img-link img:hover {
-    filter: grayscale(0%)
+.collaborations__img:hover {
+    /* filter: grayscale(0%) */
 }
-.collaborations__link {
-    display: block;
-    margin-top: 8px;
-    font-size: 20px;
-}
+
 
 
 /**************************/
