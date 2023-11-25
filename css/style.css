@@ -598,6 +598,13 @@ svg:hover {
         font-size: 20px;
     }
 
+    .footer__body {
+        flex-direction: column;
+    }
+
+    .image__box--1, .image__box--2, .image__box--3 {
+        grid-template-columns: 1fr;
+    }
 
 
 
