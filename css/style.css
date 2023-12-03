@@ -180,10 +180,6 @@ li {
 
 
 
-  
-
-
-
 /**************************/
 /* SECTION ABOUT */
 /**************************/
@@ -393,7 +389,7 @@ li {
 /* SECTION FOOTER */
 /**************************/
 .footer {
-    padding: 98px 0;
+    padding: 44px 0;
     background-color: #495057;
 }
 .footer__body {
@@ -422,6 +418,7 @@ li {
     color: #881600;
 } */
 svg{
+    width: 34px;
     transition: all 1s;
 }
 svg:hover {
@@ -486,6 +483,9 @@ svg:hover {
     }
 }
 @media screen and (max-width: 820px) {
+    .moving-bg {
+        background-image: url('../img/yellow_bg_mobile.jpg');
+    }
     .wrapper {
         padding-bottom: 400px;
     }
