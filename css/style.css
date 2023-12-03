@@ -366,6 +366,23 @@ li {
 }
 
 
+/**************************/
+/* SECTION EXHIBITION */
+/**************************/
+.exhibitions {
+    padding: 124px 0;
+}
+.gallery__title {
+    font-size: 37px;
+    margin-bottom: 44px;
+}
+.exhibitions__list {
+    text-align: center;
+}
+.exhibitions__item {
+    font-size: 18px;
+    padding: 10px;
+}
 
 
 
