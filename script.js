@@ -30,31 +30,36 @@ const btnMobile = document.querySelector(".navigation__button");
 const nav = document.querySelector(".nav");
 const navigationBackground = document.querySelector('.navigation__background');
 
-btnMobile.addEventListener("click", function () { /* при клике на бургер */
-    nav.classList.toggle("nav--open"); /* Открываем меню */
-    btnMobile.classList.toggle('navigation__button--toggle');   /* кнопка бургер */
+btnMobile.addEventListener("click", function () { 
+    nav.classList.toggle("nav--open"); 
+    btnMobile.classList.toggle('navigation__button--toggle');  
     navigationBackground.classList.toggle('navigation__background--toggle');
-    // document.body.classList.toggle('lock'); /* отключаем скролл страницы когда открыто меню */
 });
 
 
 
 ///////////////////////////////////////
 // Page navigation
-document.querySelector('.nav__list').addEventListener('click', function (e) { //навешиваем на ul слушателя
+document.querySelector('.nav__list').addEventListener('click', function (e) {
   e.preventDefault();
 
   // Matching strategy
-  if (e.target.classList.contains('nav__link')) { // если мы кликнули на ссылку
-    const id = e.target.getAttribute('href'); // узнаем ее данные в атрубте href
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' }); // находим элемент с этим данным и скролем плавно
+  if (e.target.classList.contains('nav__link')) { 
+    const id = e.target.getAttribute('href'); 
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
-
   //  Close mobile naviagtion это для того когда открыто бургер меню
-  if (nav.classList.contains("nav--open")) // если на наве весит класс nav--active
+  if (nav.classList.contains("nav--open")) {// если на наве весит класс nav--active
       nav.classList.remove('nav--open'); // убираем его и закрывается бургер меню
-      btnMobile.classList.remove('btn-mobile--active'); /* ибираем к кнопке класс для крестика и крестик становится линиями */
-      navigationBackground.classList.remove('navigation__background--toggle');
+      btnMobile.classList.remove('navigation__button--toggle'); /* ибираем к кнопке класс для крестика и крестик становится линиями */
 
-      // document.body.classList.remove('lock'); /* и включаем снова прокрутку страницы */
+      navigationBackground.classList.remove('navigation__background--toggle');
+      
+    }
+});
+
+
+/* убираем эфект перетаскивания. */
+document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
 });
