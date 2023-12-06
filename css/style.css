@@ -330,7 +330,7 @@ li {
     height: 100%;
     object-fit: cover;
     transition: all 0.7s;
-    filter: grayscale(100%)
+    filter: grayscale(100%);
 }
 .collaborations__img:hover {
     filter: grayscale(0%)
@@ -389,13 +389,14 @@ li {
 /* SECTION FOOTER */
 /**************************/
 .footer {
-    padding: 44px 0;
+    padding: 34px 0;
     background-color: #495057;
 }
 .footer__body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 .footer__contacts {
 }
@@ -409,6 +410,11 @@ li {
     margin-top: 32px;
     display: flex;
     gap: 5px;
+}
+.footer__title {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
 .footer__subheader {
     color: #fff;
@@ -503,6 +509,7 @@ svg:hover {
 
 
 @media screen and (max-width: 630px) {
+
     .hero {
         margin-top: 0;
     }
@@ -513,9 +520,7 @@ svg:hover {
     .wrapper {
         padding-bottom: 300px; 
     }
-    .nav {
-        display: none;
-    }
+  
     .nav__link {
         font-size: 14px;
     }
@@ -528,4 +533,141 @@ svg:hover {
     .image__box--1, .image__box--2, .image__box--3 {
         grid-template-columns: 1fr;
     }
+
+
+
+
+    /* Mobile navigation */
+
+    .nav {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    .navigation__background {
+        /* z-index: 10; */
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 10;
+        top: 20px;
+        right: 20px;
+        background-image: radial-gradient(rgb(255, 255, 255), rgb(221, 221, 221));
+        transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+    .navigation__background--toggle {
+        transform: scale(80);
+    }
+    /* .navigation__checkbox:checked  ~ .navigation__nav {
+        opacity: 1;
+        width: 100%;
+    } */
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        height: 100vh;
+        width: 100%;
+        /* background-color: #fff; */
+        margin-top: 0;
+        transition: all 0.3s 0.3s;
+
+    }
+    .nav__list {
+        position: relative;
+        z-index: 1000;
+        padding: 84px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav__link {
+        z-index: 10000;
+        position: relative;
+        z-index: 30;
+        font-size: 24px;
+        color: #333;
+    }
+    .nav__item {
+        position: relative;
+        z-index: 300;
+
+    }
+    .nav__item span {
+        display: none;
+    }
+
+
+
+    .navigation__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.9);
+        height: 40px;
+        width: 40px;
+        top: 20px;
+        right: 20px;
+        border-radius: 50%;
+        z-index: 200;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+
+    /* NAVIGATION ICON */
+    .navigation__button {
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .navigation__icon {
+        position: relative;
+    }
+    .navigation__icon,
+    .navigation__icon::after,
+    .navigation__icon::before {
+        width: 20px;
+        height: 1px;
+        background-color: #333;
+        display: inline-block;
+    }
+    .navigation__icon::after,
+    .navigation__icon::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .3s;
+    }
+    .navigation__icon::before {
+        top: -6px;
+    }
+    .navigation__icon::after {
+        top: 6px;
+    }
+
+    /* navigation btn toggle */
+    .navigation__button.navigation__button--toggle .navigation__icon {
+        background-color: transparent;
+    }
+    .navigation__button.navigation__button--toggle .navigation__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .navigation__button.navigation__button--toggle .navigation__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    .nav--open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+
+
+
 }
