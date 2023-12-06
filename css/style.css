@@ -514,17 +514,18 @@ svg:hover {
         margin-top: 0;
     }
     .hero__heading {
-        margin-top: 36px;
+        margin-top: 136px;
         font-size: 46px;
       }
     .wrapper {
-        padding-bottom: 300px; 
+        /* padding-bottom: 300px;  */
     }
   
     .nav__link {
         font-size: 14px;
     }
     .hero__subheading {
+        padding: 0 30px;
         font-size: 20px;
     }
     .footer__body {
