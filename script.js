@@ -1,6 +1,5 @@
 
 const allSections = document.querySelectorAll('.section');
-console.log(allSections);
 
 const revealSection = function(entries, observer){
   const entry = entries[0];
@@ -41,7 +40,7 @@ btnMobile.addEventListener("click", function () {
 ///////////////////////////////////////
 // Page navigation
 document.querySelector('.nav__list').addEventListener('click', function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   // Matching strategy
   // if (e.target.classList.contains('nav__link')) { 
