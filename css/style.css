@@ -104,7 +104,7 @@ li {
     display: flex;
     gap: 32px;
 }
-.nav__link, .nav__link-lang {
+.nav__link{
     position: relative;
     display: inline-block;
     line-height: 1.3;
@@ -114,7 +114,7 @@ li {
     transition: all 0.5s ease-in;
 }
  
-.nav__link:after, .nav__link-lang:after {
+.nav__link:after {
     content: "";
     display: block;
     position: absolute;
@@ -125,8 +125,7 @@ li {
     transition: width 0.3s ease-out;
 }
 .nav__link:hover:after,
-.nav__link:focus:after, 
-.nav__link-lang:hover:after {
+.nav__link:focus:after {
     width: 100%;
 }
 .hero {
