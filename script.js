@@ -43,10 +43,10 @@ document.querySelector('.nav__list').addEventListener('click', function (e) {
   // e.preventDefault();
 
   // Matching strategy
-  // if (e.target.classList.contains('nav__link')) { 
-  //   const id = e.target.getAttribute('href'); 
-  //   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  // }
+  if (e.target.classList.contains('nav__link')) { 
+    const id = e.target.getAttribute('href'); 
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
   //  Close mobile naviagtion это для того когда открыто бургер меню
   if (nav.classList.contains("nav--open")) {// если на наве весит класс nav--active
       nav.classList.remove('nav--open'); // убираем его и закрывается бургер меню
