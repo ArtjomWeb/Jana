@@ -373,7 +373,7 @@ li {
 }
 .social-links {
     display: flex;
-    gap: 5px;
+    gap: 15px;
 }
 .footer__title {
     text-align: center;
