@@ -292,7 +292,7 @@ li {
 }
 .collaborations__item {
     width: fit-content;
-    height: 270px;
+    height: 420px;
     justify-content: space-evenly;
 }
 .collaborations__img {
@@ -463,6 +463,9 @@ svg:hover {
 
     .collaborations__text {
         width: 100%;
+    }
+    .collaborations__item {
+        height: 240px;
     }
 
 }
