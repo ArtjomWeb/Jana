@@ -292,7 +292,7 @@ li {
 }
 .collaborations__item {
     width: fit-content;
-    height: 420px;
+    height: 270px;
     justify-content: space-evenly;
 }
 .collaborations__img {
@@ -384,6 +384,7 @@ li {
     font-size: 22px;
 }
 .footer__subheader {
+    text-align: center;
     color: #fff;
     font-size: 28px;
 }
