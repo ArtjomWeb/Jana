@@ -71,7 +71,7 @@ li {
     background-image: url('../img/yellow_bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 50% 75%;
     -webkit-animation: kenburns-top-right ease-out both;
     animation: kenburns-top-right ease-out both;
     animation-duration: 10s;
@@ -336,7 +336,7 @@ li {
 /* SECTION EXHIBITION */
 /**************************/
 .exhibitions {
-    padding: 124px 0;
+    padding: 115px 0;
 }
 .gallery__title {
     font-size: 37px;
@@ -356,7 +356,7 @@ li {
 /* SECTION FOOTER */
 /**************************/
 .footer {
-    padding: 54px 0;
+    padding: 56px 0;
     background-color: #495057;
 }
 .footer__body {
@@ -490,6 +490,7 @@ svg:hover {
         font-size: 20px;
     }
     .footer__body {
+        gap: 45px;
         flex-direction: column-reverse;
     }
     .image__box--1,
@@ -605,6 +606,10 @@ svg:hover {
     .nav--open {
         transform: translateX(0);
         opacity: 1;
+    }
+
+
+    .footer__title {
     }
 
 }
